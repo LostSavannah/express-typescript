@@ -3,10 +3,12 @@ import express, {Express, Request, Response} from 'express';
 
 const app:Express = express();
 
+const port = 8082;
+
 app.get('/', (req: Request, res: Response) => {
-    res.status(200).send('Express with typescript');
+    res.status(200).send('Ready');
 });
 
-app.listen(8082, () => {
-    
+app.listen(port, () => {
+    console.log(`🚀 [Server] Listening on ${port}`);
 });
